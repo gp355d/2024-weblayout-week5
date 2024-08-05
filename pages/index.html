@@ -8,48 +8,204 @@
     <title>後台主要頁面</title>
   </head>
   <body>
-    <%- include('./layout/slider'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+    <div class="d-flex">
+      <%- include('./layout/slider'); -%>
+      <main class="content">
+        <div class="row">
+          <header class="header d-flex">
+            <nav class="navbar navbar-expand-lg p-0">
+              <div class="container-fluid p-0">
+                <h1 class="navbar-brand fw-bold fs-4">Assignment</h1>
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fw-bold d-inline-block me-2">All Courses</span>
+                      <span class="material-symbols-outlined text-success">keyboard_arrow_down</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="d-flex ms-auto align-items-center promptMsg">
+              <a href="#" class="me-4">
+                <span class="material-symbols-outlined d-block">search</span>
+              </a>
+              <a href="#">
+                <span class="material-symbols-outlined d-block">notifications_active </span>
+              </a>
+            </div>
+          </header>
+        </div>
+        <div class="row">
+          <div class="d-flex">
+            <ul class="navbar-nav mb-1 me-auto">
+              <li class="nav-item dropdown">
+                <a class="d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="fw-bold d-inline-block me-2">All (4)</span>
+                  <span class="material-symbols-outlined text-success">keyboard_arrow_down</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <span class="d-block commentNum">2 comments</span>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active"  aria-current="true" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+                <div class="d-flex w-100 justify-content-between align-items-center mb-1">
+                  <h5>Chapter Assignment 2</h5>
+                  <small>4 hrs ago</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="me-auto fw-bold">Please check this file…</p>
+                  <small class="user">Emily Wang</small>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action"  aria-current="true" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-home">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h5 class="mb-1">Chapter Assignment 1</h5>
+                  <small>12 hrs ago</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="me-auto fw-bold">My Homework</p>
+                  <small class="user">David Xu</small>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action"  aria-current="true" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-home">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h5>Final Assignment</h5>
+                  <small>18 hrs ago</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="me-auto fw-bold">Have a problem with this…</p>
+                  <small class="user">Tony Wei</small>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action"  aria-current="true" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-home">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h5>Final Assignment</h5>
+                  <small>19 hrs ago</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="me-auto fw-bold">Did I do it right?</p>
+                  <small class="user">Christina Lin</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-8 assignment mb-3 vh-100">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <div class="card w-100" style="width: 18rem;">
+                  <div class="card-header style d-flex justify-content-between align-items-center">
+                    <div>
+                      <h5 class="mb-1 title">Chapter Assignment 2 / HTML&CSS</h5>
+                      <p class="h6 fw-bold">Please check this file for me, thanks!</p>
+                    </div>
+                    <a href="#">
+                      <span class="material-symbols-outlined d-block">more_vert</span>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex flex-column mb-3">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-2">
+                          <img src="../assets/images//emilywang.jpeg" alt="userphoto" width="48" height="48" class="rounded-circle object-fit-cover">
+                        </div>
+                        <div class="flex-grow-1 AskContent">
+                          <h5 class="fw-bold mb-1 h6">Emily Wang</h5>
+                          <small class="d-block mb-3 time">10:38 AM (4 hours ago)</small>
+                          <p class="mb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code>div</code> is bigger than the height of the <code>img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>What is the gap or extra space below image?</p>
+                          <a href="#" class="downloadBtn d-inline-block fw-bold">
+                            <span class="material-symbols-outlined d-inline-block me-2 fs-4">attach_file</span>
+                            <span>HW-2-David.zip</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="position-static">
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body align-items-end p-0 border-0">
+                          <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between">
+                              <div class="d-flex">
+                                <div class="flex-shrink-0 me-2">
+                                  <img src="../assets/images//andychen.jpeg" alt="userphoto" width="48" height="48" class="rounded-circle object-fit-cover">
+                                </div>
+                                <div class="flex-grow-1">
+                                  <h5 class="fw-bold mb-1 h6">Andy Chen(You)</h5>
+                                  <small class="d-block mb-3 time">13:24 AM (1 hours ago)</small>
+                                  <p class="mb-3 replyContent">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. <br><br>You can: <br><br>　• adjust the <code>vertical-align</code> of the image to position it elsewhere (e.g. the <code>middle</code> ) or <br>　• change the <code>display</code> so it isn’t inline.</p>
+                                </div>
+                              </div>
+                              <div class="d-flex tools">
+                                <a href="#" class="me-4">
+                                  <span class="material-symbols-outlined">star_rate</span>
+                                </a>
+                                <a href="#">
+                                  <span class="material-symbols-outlined">edit</span>
+                                </a>
+                              </div>
+                            </div>
+      
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
+
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.</div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.it amet consectetur adipisicing elit. Voluptatem.</div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.it amet elit. Voluptatem.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end action">
+          <div class="col-8">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <a class="me-4 link-success" href="#">
+                  <span class="material-symbols-outlined d-block">chevron_left</span>
+                </a>
+                <a class="link-success" href="#">
+                  <span class="material-symbols-outlined d-block">chevron_right</span>
+                </a>
+              </div>
+              <div class="d-flex justify-content-end position-relative">
+                <button class="btn btn-outline-success me-2">Mark as read</button>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Reply
+                </button>
+                <!-- <div class="collapse position-absolute bottom-0 end-0" id="collapseExample">
+                  <div class="card card-body align-items-end">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when
+                    the user activates the relevant trigger.
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Reply
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

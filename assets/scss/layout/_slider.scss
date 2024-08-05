@@ -1,4 +1,27 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.navbar {
+  width: 296px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.logo{
+  margin-bottom: 32px;
+  margin-left: 28px;
+  margin-right: 0;
+}
+.content {
+  width: calc(100% - 296px);
+  margin-left: auto;
+}
+.userInfo{
+  padding-left: 28px;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 28px;
+  }
+}
+.mailAddress{
+  color: $gray-600;
+  font-size: 14px;
 }
