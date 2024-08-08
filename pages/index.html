@@ -9,9 +9,8 @@
   </head>
   <body>
     <div class="d-flex">
-      <%- include('./layout/slider'); -%>
+      <%- include('./layout/slider',{page: "assignment"}); -%>
       <main class="content">
-        <div class="row">
           <header class="header d-flex">
             <nav class="navbar navbar-expand-lg p-0">
               <div class="container-fluid p-0">
@@ -40,8 +39,6 @@
               </a>
             </div>
           </header>
-        </div>
-        <div class="row">
           <div class="d-flex">
             <ul class="navbar-nav mb-1 me-auto">
               <li class="nav-item dropdown">
@@ -58,7 +55,6 @@
             </ul>
             <span class="d-block commentNum">2 comments</span>
           </div>
-        </div>
         <div class="row">
           <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
@@ -134,40 +130,72 @@
                         </div>
                       </div>
                     </div>
-                    <div class="position-static">
-                      <div class="collapse" id="collapseExample">
-                        <div class="card card-body align-items-end p-0 border-0">
-                          <div class="d-flex flex-column">
-                            <div class="d-flex justify-content-between">
-                              <div class="d-flex">
-                                <div class="flex-shrink-0 me-2">
-                                  <img src="../assets/images//andychen.jpeg" alt="userphoto" width="48" height="48" class="rounded-circle object-fit-cover">
-                                </div>
-                                <div class="flex-grow-1">
-                                  <h5 class="fw-bold mb-1 h6">Andy Chen(You)</h5>
-                                  <small class="d-block mb-3 time">13:24 AM (1 hours ago)</small>
-                                  <p class="mb-3 replyContent">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. <br><br>You can: <br><br>　• adjust the <code>vertical-align</code> of the image to position it elsewhere (e.g. the <code>middle</code> ) or <br>　• change the <code>display</code> so it isn’t inline.</p>
-                                </div>
-                              </div>
-                              <div class="d-flex tools">
-                                <a href="#" class="me-4">
-                                  <span class="material-symbols-outlined">star_rate</span>
-                                </a>
-                                <a href="#">
-                                  <span class="material-symbols-outlined">edit</span>
-                                </a>
-                              </div>
-                            </div>
-      
+
+ 
+                    <div class="d-flex flex-column">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-2">
+                            <img src="../assets/images//andychen.jpeg" alt="userphoto" width="48" height="48"
+                              class="rounded-circle object-fit-cover">
                           </div>
+                          <div class="flex-grow-1">
+                            <h5 class="fw-bold mb-1 h6">Andy Chen(You)</h5>
+                            <small class="d-block mb-3 time">13:24 AM (1 hours ago)</small>
+                            <p class="mb-3 replyContent">Hi David, by default, an image is rendered inline, like a letter so it sits on
+                              the same line that a, b, c and d sit on. There is space below that line for the descenders you find on
+                              letters like g, j, p and q. <br><br>You can: <br><br>　• adjust the <code>vertical-align</code> of the image
+                              to position it elsewhere (e.g. the <code>middle</code> ) or <br>　• change the <code>display</code> so it
+                              isn’t inline.</p>
+                          </div>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="position-static">
+                    <div class="collapse" id="collapseExample">
+                      <div class="card-header style d-flex align-items-center">
+                        <span class="fw-bold me-2 d-block">Body Text</span>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">arrow_drop_down</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">format_bold</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">format_italic</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">format_list_bulleted</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">format_list_numbered</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">image</span>
+                        </a>
+                        <a href="#" class="me-4 d-block">
+                          <span class="material-symbols-outlined">attachment</span>
+                        </a>
+                        <a href="#" class="d-block">
+                          <span class="material-symbols-outlined">code</span>
+                        </a>
+                      </div>
+                      <div class="card-body p-0 position-relative">
+                        <textarea class="border border-0 px-4 py-3 bg-white w-100 d-block" id="validationTextarea" placeholder="Reply an answer…" required="" style="height: 200px;"></textarea>
+                        <div class="d-flex px-4 py-3 justify-content-end position-absolute end-0 bottom-0">
+                          <button class="btn btn-outline-success me-2">Cancel</button>
+                          <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Reply
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
 
-
                   <!-- </div> -->
                 </div>
+                
               </div>
               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.</div>
               <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem.it amet consectetur adipisicing elit. Voluptatem.</div>
@@ -188,7 +216,7 @@
               </div>
               <div class="d-flex justify-content-end position-relative">
                 <button class="btn btn-outline-success me-2">Mark as read</button>
-                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn btn-success" type="button" onclick="location.href='./reply.html';">
                   Reply
                 </button>
                 <!-- <div class="collapse position-absolute bottom-0 end-0" id="collapseExample">

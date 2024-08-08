@@ -18,7 +18,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active border-start border-4 border-success text-success d-flex align-items-center" aria-current="page" href="#">
+          <a class="nav-link active border-start border-4 d-flex align-items-center <%= page === 'assignment' ? 'border-success text-success ' : '' %>" aria-current="page" href="./index.html">
             <span class="material-symbols-outlined fs-4 d-inline-block me-3">assignment</span>
             <span class="d-inline-block">Assignment</span>
           </a>
@@ -30,7 +30,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active border-start border-4 d-flex align-items-center" aria-current="page" href="#">
+          <a class="nav-link active border-start border-4 d-flex align-items-center <%= page === 'admin' ? 'border-success text-success ' : '' %>" aria-current="page" href="./admin.html">
             <span class="material-symbols-outlined fs-4 d-inline-block me-3">supervisor_account</span>
             <span class="d-inline-block">Admin</span>
           </a>
